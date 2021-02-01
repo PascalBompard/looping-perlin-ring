@@ -2,13 +2,13 @@
 
 function hud(txt){
     push();
-      rectMode(CORNER);
+      // rectMode(CORNER);
       textAlign (CENTER,BASELINE);
-      textSize(11);
+      textSize(16);
       noStroke();
       fill(240);
       rect(20, height-70, 200, 50)
       fill(50);
-      text(txt, 120, height - 40 );
+      text(txt, 120, height -40 );
     pop() ;
 }
