@@ -16,11 +16,11 @@ function setup() {
   } else {
     baseRadius = windowWidth/(numOrbs);
   }
-  
   bgCol = color(245,240,30);
 }
 
 function draw() {
+  let strokeWidth = baseRadius/5;
   background(bgCol);
   fr = "Frame Rate " + round(frameRate());
   title = "Pulse";
@@ -29,7 +29,7 @@ function draw() {
   translate(width/2, height/2);
   
   for (let i = 1; i < numOrbs; i++) {
-    strokeWeight(30 - (8*i));
+    strokeWeight(strokeWidth - (8*i));
     stroke(0,255);
     noFill()   
     beginShape();
