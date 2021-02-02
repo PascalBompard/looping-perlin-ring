@@ -7,6 +7,12 @@ let numOrbs = 4;
 let fr;
 let title;
 let code;
+let myFont;
+
+function preload() {
+  titleFont = loadFont('assets/Nunito/Nunito-Bold.ttf');
+  bodyFont = loadFont('assets/Nunito/Nunito-Regular.ttf');
+}
 
 
 function setup() {
@@ -20,7 +26,7 @@ function setup() {
 }
 
 function draw() {
-  let strokeWidth = baseRadius/5;
+  let strokeWidth = baseRadius/4;
   background(bgCol);
   fr = "Frame Rate " + round(frameRate());
   title = "Pulse";
@@ -29,7 +35,7 @@ function draw() {
   translate(width/2, height/2);
   
   for (let i = 1; i < numOrbs; i++) {
-    strokeWeight(strokeWidth - (8*i));
+    strokeWeight(strokeWidth - (10*i));
     stroke(0,255);
     noFill()   
     beginShape();
